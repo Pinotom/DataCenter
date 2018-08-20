@@ -1,1 +1,13 @@
-<p>{{cluster1 | json}}</p>
+<div class="container mt-2">
+  <div class="card card-block">
+
+    <h1 class="navbar-brand mb-0">Overall Metrics</h1>
+
+    <div class="row">
+      <app-metric class="col-sm-6" [value]="cpu.used" [max]="cpu.available" [title]="'CPU'" [description]="'utilization of CPU cores'">
+      </app-metric>
+      <app-metric class="col-sm-6" [value]="mem.used" [max]="mem.available" [title]="'Memory'" [description]="'utilization of memory in GB'">
+      </app-metric>
+    </div>
+  </div>
+</div>
